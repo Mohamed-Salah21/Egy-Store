@@ -1,0 +1,167 @@
+.cart-items-page {
+  margin-bottom: 5vh;
+  position: relative;
+  .cart-items-container {
+    width: 1100px;
+    margin: 0 auto;
+    .h2-no-items {
+      margin: 8vh 0 30vh;
+      text-transform: none;  
+    }
+    .h2-items {
+      margin: 8vh 0 4vh;
+      text-transform: none;  
+    }
+    .items-and-orderSummary {
+      position: relative;
+      .items {
+        width: 60%;
+        .item {
+          border: 1px solid #aaa;
+          height: 37vh;
+          position: relative;
+          a {
+            img {
+              height: 80%;
+              margin-top: 15px;
+              width: 200px;
+              object-fit: contain;
+              position: absolute;
+              top: 0;
+              left: 5px;
+              transition: transform 0.5s;
+            }
+            &:hover img {
+              transform: scale(1.05);
+            }
+          }
+          .name-and-price {
+            width: 50%;
+            position: absolute;
+            top: 20px;
+            left: 225px;
+            h4 {
+              font-size: 16px;
+            }
+            h4:last-of-type {
+              font-weight: normal;
+              margin-top: 5px;
+            }
+          }
+          .moving-to-trash {
+            position: absolute;
+            top: 30px;
+            right: 15px;
+            background-color: transparent;
+            outline: 0;
+            border: 0;
+            cursor: pointer;
+            i {
+              font-size: 20px;
+            }
+          }
+          .quantity {
+            user-select: none;
+            position: absolute;
+            bottom: 35px;
+            left: 225px;
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            span {
+              font-weight: 500;
+              text-align: center;
+            }
+            button {
+              height: 30px;
+              width: 30px;
+              color: #fff;
+              border: 1px solid #333;
+              outline: 0;
+              cursor: pointer;
+              border-radius: 50%;
+              position: relative;
+              background-color: #000;
+              &.dis-active {
+                cursor: default;
+                border: 1px solid #857f7f;
+                background-color: #857f7f;
+                pointer-events: none;
+              }
+              &:active {
+                box-shadow: 0 0 1px 5px rgba(#000, 0.4),
+                  0 0 1px 5px rgba(#000, 0.1), 0 0 1px 12.5px rgba(#000, 0.1);
+              }
+            }
+          }
+          .sub-total {
+            position: absolute;
+            right: 15px;
+            bottom: 30px;
+            span {
+              font-weight: 500;
+              font-size: 16px;
+            }
+          }
+        }
+        .item:not(:first-of-type) {
+          margin-top: 20px;
+        }
+      }
+      .order-summary-outer {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 350px;
+        .order-summary {
+          width: 350px;
+          position: fixed;
+          .order-summary-inner-container {
+            margin-top: 1vh;
+            border: 1px solid #aaa;
+            padding: 15px;
+            .span-tags {
+              margin-top: 5px;
+              span {
+                font-weight: 500;
+              }
+            }
+            .order-total {
+              margin-top: 20px;
+              position: relative;
+              span {
+                font-weight: bolder;
+              }
+              &:after {
+                position: absolute;
+                left: 0;
+                top: -10px;
+                height: 1px;
+                width: 100%;
+                background-color: #aaa;
+                content: "";
+              }
+            }
+            .span-tags,
+            .order-total {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+            }
+            button {
+              background-color: #333;
+              color: #fff;
+              width: 100%;
+              padding: 15px 0;
+              text-transform: uppercase;
+              margin-top: 1rem;
+              cursor: pointer;
+              outline: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

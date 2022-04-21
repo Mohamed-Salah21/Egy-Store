@@ -1,0 +1,88 @@
+.nav1 {
+  background-color: #eef3fb;
+  .nav1-container {
+    width: 1100px;
+    margin: 0 auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .link {
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 30px;
+      color: #ed08a9;
+      span {
+        color: #005699;
+      }
+    }
+    & > div {
+      a {
+        font-size: 22px;
+        position: relative;
+        i {
+          color: #005699 !important ;
+        }
+        .length {
+          font-size: 15px;
+          position: absolute;
+          right: -22px;
+          top: -11px;
+          transform: translateX(-50%);
+          color: #ed08a9;
+          font-weight: bolder;
+          width: 20px;
+          text-align: center;
+          display: block;
+          border-radius: 50%;
+          font-weight: 900;
+        }
+      }
+    }
+  }
+}
+.nav2 {
+  background-color: #333;
+  .nav2-container {
+    width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    a {
+      display: inline-block;
+      color: #fff;
+      padding: 12.5px 15px !important ;
+    }
+    a.active {
+      background-color: #005699;
+    }
+    span {
+      position: absolute;
+      color: #fff;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      text-transform: lowercase;
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .nav1-container,
+  .nav2-container {
+    width: 974px !important ;
+  }
+}
+@media (max-width: 992px) {
+  .nav1-container,
+  .nav2-container {
+    width: 750px !important ;
+  }
+}
+@media (max-width: 768px) {
+  .nav1-container,
+  .nav2-container {
+    width: 90% !important ;
+  }
+  .nav1-container .link {
+    font-size: 25px !important;
+  }
+}

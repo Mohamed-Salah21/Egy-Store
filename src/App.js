@@ -5,6 +5,7 @@ import Nav2 from "./components/nav/Nav2";
 import RoutesLinks from "./components/Routes/Routes";
 import CopyRight from "./components/copy_right/CopyRight";
 function App() {
+  console.log('ahmeed shalaby')
   return (
     <BrowserRouter>
       <div className="App">
